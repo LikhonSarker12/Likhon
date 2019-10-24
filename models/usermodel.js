@@ -24,8 +24,9 @@ module.exports = {
 			}
 		});	
 	},
-	getAll: function(user,callback){
-		var sql = "select * from user where status='" + user.status+"'";
+	getAll: function(callback){
+
+		var sql = "select * from user ";
 		
 		db.getResults(sql, function(results){
 			

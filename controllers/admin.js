@@ -34,14 +34,12 @@ router.post('/adduser', function(request, response){
 	
 });
 router.get('/customerlist', function(request, response){
-	 user=	 {
-        status:1,
-	 }
-	usermodel.getAll(user, function(status){	
-		if(status){
-			response.redirect("/admin/customerlist");
+	 
+	usermodel.getAll(function(result){	
+		if(result){
+			response.render("admin/customer", result);
 		}else{
-			response.redirect("No user");	
+			response.redirect("/admin/customerlist");	
 		}
 	})
 });
