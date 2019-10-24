@@ -24,8 +24,8 @@ module.exports = {
 			}
 		});	
 	},
-	getAll: function(callback){
-		var sql = "select * from user";
+	getAll: function(user,callback){
+		var sql = "select * from user where status='" + user.status+"'";
 		
 		db.getResults(sql, function(results){
 			
@@ -38,7 +38,7 @@ module.exports = {
 	},
 	insert: function(user, callback){
 
-		var sql ="insert into user values('', '"+ user.username+"', '"+user.password+"')";
+		var sql ="insert into user values('','"+ user.status +"','"+ user.username+"', '"+user.password+"')";
 		db.execute(sql, function(status){
 			callback(status);
 		});

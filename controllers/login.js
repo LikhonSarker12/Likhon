@@ -19,7 +19,7 @@ router.post('/',(req,res)=>{
 			{
                 res.redirect('/admin');
             }
-            else if(status==2){
+          else if(status==2){
                 res.redirect('/customer');
             }
             
