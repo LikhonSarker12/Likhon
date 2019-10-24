@@ -17,14 +17,12 @@ router.post('/',(req,res)=>{
             res.cookie('username', req.body.username);
             if(status==1)
 			{
-
+                res.redirect('/admin');
             }
             else if(status==2){
-
+                res.redirect('/customer');
             }
-            else if(status==3){
-
-            }
+            
 		}else{
 			res.send('invalid username/password');		
 		}
