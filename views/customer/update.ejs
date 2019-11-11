@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add offer page</title>
+</head>
+<body>
+        <h1> SCHOLARSHIP</h1>
+        <a href="/customer">Back</a> | 
+        <a href="/customer/show">All Order</a>|
+        <a href="/logout">logout</a> 
+                        
+<form method="post" >
+
+   
+	<table  border="1">
+		
+        <tr>
+        <td> Category </td>
+            <td>
+               <div>
+                   <input type = "radio" name = "category" value = "Liquid"> Liquid 
+                   <input type = "radio" name = "category" value = "Solid"> Solid
+                    
+               </div>
+           
+            </td>
+        </tr>
+         
+         <tr>
+                <td>Amount:</td>
+                <td><input type="text" name="amount" value="<%= amount %>"> </td>
+            </tr>
+            <tr>
+                    <td>Request Date</td>
+                    <td><input type="date" name="date"value="<%= date %>"></td>
+                </tr>
+            
+				<tr>
+                        <td colspan="2">
+                            <center>
+                                    <input type="submit" name="submit" value="Submit">
+                            </center>
+                        </td>
+                    </tr> 
+
+		
+	</table>
+	</form>
+	
+
+</body>
+</html>

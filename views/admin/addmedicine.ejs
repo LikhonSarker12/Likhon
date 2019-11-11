@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Account page</title>
+	
+</head>
+<body>
+	<a href="/admin/medicine">Back</a> 
+<fieldset>
+	<legend>Add Medicine</legend>
+	<form method="post" >
+    <center>	
+	<table border="2">
+		<tr>
+			<td>Medicine Name:</td>
+			<td><input type="text" name="name"></td>
+		</tr>
+			
+		<tr>
+			<td>Vendor Name:</td>
+			<td><input type="text" name="vendor"></td>
+			</tr>
+			<tr>
+				<td>Type: </td>
+				<td>
+				   <div>
+					   <input type = "radio" name = "type" value = " Aspirin"> Aspirin
+					   <input type = "radio" name = "type" value = " Paracetamol"> Paracetamol
+						
+				   </div>
+			   
+				</td>
+			</tr>
+			<td> Category </td>
+				<td>
+				   <div>
+					   <input type = "radio" name = "category" value = "Liquid"> Liquid 
+					   <input type = "radio" name = "category" value = "Solid"> Solid
+						
+				   </div>
+			   
+				</td>
+			</tr>
+		<tr>
+			<td>Price:</td>
+			<td><input type="text" name="price"></td>
+		</tr>			
+		
+		<tr>
+			<td>Amount:</td>
+			<td><input type="text" name="amount"></td>
+		</tr>		   
+				<tr>
+					<td colspan="2">
+						<center>
+								<input type="submit" name="submit" value="Submit">
+						</center>
+					</td>
+				</tr> 
+				
+		   
+		
+	</table>
+	</form>
+</center>	
+</fieldset>
+</body>
+</html>

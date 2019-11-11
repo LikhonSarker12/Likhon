@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>offer page</title>
+</head>
+<body>
+	<h1>Customer</h1>
+    <a href="/admin/administrative">Back</a> | 
+    <a href="/admin/customer">Show All</a> |
+    <a href="/logout">logout</a>
+    <p>
+         <form method="post">
+        <table border="1">
+                    <tr>
+                            <td>ID:</td>
+                            <td><input type="text" name="customerid"></td>
+                            
+                        </tr>
+                        <tr>
+                                <td colspan="2">
+                                    <center>
+                                            <input type="submit" name="search" value="Search">
+                                    </center>
+                                </td>
+                            </tr> 
+                    
+            </table>
+         </form>
+            
+    </p>
+    
+	<table border="1">
+        
+		<tr>
+			<td>ID</td>
+			<td>Customer Name</td>
+            <td>Address</td>
+            <td>Email</td>
+            <td>Phone Number</td>
+            <td>username</td>
+            
+		</tr>
+
+	<% for(var i=0; i < users.length; i++){ %>
+
+		<tr>
+			<td><%= users[i].ID %></td>
+			<td><%= users[i].name %></td>
+            <td><%= users[i].address %></td>
+            <td><%= users[i].email %></td>
+            <td><%= users[i].contact%></td>
+            <td><%= users[i].username%></td>
+            
+			<td>
+				<a href="/admin/deletecustomer/<%= users[i].ID %>">Delete</a> |				
+				
+			</td>
+		</tr>
+	<% } %>
+
+	</table>
+
+
+</body>
+</html>

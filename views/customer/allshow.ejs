@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> addmedicine</title>
+</head>
+<body>
+	<h1>Medicine</h1>
+    <a href="/customer/ordermedicine">Back</a> |    
+    <a href="/logout">logout</a>
+    <p>
+         <form method="post">
+        <table border="1">
+                    <tr>
+                            <td>ID:</td>
+                            <td><input type="text" name="id"></td>
+                            
+                        </tr>
+                        <tr>
+                                <td colspan="2">
+                                    <center>
+                                            <input type="submit" name="search" value="Search">
+                                    </center>
+                                </td>
+                            </tr> 
+                    
+            </table>
+         </form>
+            
+    </p>
+    
+	<table border="1">
+        
+		<tr>
+			<td>ID</td>
+			<td>Medicine Name</td>
+            <td>Category</td>   
+            <td>Amount</td>
+            <td>Requested Date</td>
+            <td>Action</td>
+            
+		</tr>
+
+	<% for(var i=0; i < users.length; i++){ %>
+
+		<tr>
+			<td><%= users[i].ID %></td>
+			<td><%= users[i].name %></td>
+            <td><%= users[i].category %></td>
+            <td><%= users[i].amount%></td>
+            <td><%= users[i].date %></td>
+            
+			<td>
+                <a href="/customer/deleteorder/<%= users[i].ID %>">Delete</a> |	
+                <a href="/customer/updateorder/<%= users[i].ID %>">Update</a> |			
+				
+			</td>
+		</tr>
+	<% } %>
+
+	</table>
+
+
+</body>
+</html>

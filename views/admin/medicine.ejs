@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> addmedicine</title>
+</head>
+<body>
+	<h1>Medicine</h1>
+    <a href="/admin/administrative">Back</a> | 
+    <a href="/admin/addmedicine">Add Medicine</a> |
+    
+    <a href="/admin/allmedicine">Show All</a> |
+    <a href="/logout">logout</a>
+    <p>
+         <form method="post">
+        <table border="1">
+                    <tr>
+                            <td>ID:</td>
+                            <td><input type="text" name="medicineid"></td>
+                            
+                        </tr>
+                        <tr>
+                                <td colspan="2">
+                                    <center>
+                                            <input type="submit" name="search" value="Search">
+                                    </center>
+                                </td>
+                            </tr> 
+                    
+            </table>
+         </form>
+            
+    </p>
+    
+	<table border="1">
+        
+		<tr>
+			<td>ID</td>
+			<td>Medicine Name</td>
+            <td>Vendor Name</td>
+            <td>Type</td>
+            <td>Categorized</td>
+            <td>Price</td>
+            <td>Amount</td>
+            <td>Action</td>
+            
+		</tr>
+
+	<% for(var i=0; i < users.length; i++){ %>
+
+		<tr>
+			<td><%= users[i].ID %></td>
+			<td><%= users[i].name %></td>
+            <td><%= users[i].vendor %></td>
+            <td><%= users[i].type %></td>
+            <td><%= users[i].category %></td>
+            <td><%= users[i].price %></td>
+            <td><%= users[i].amount%></td>
+            
+			<td>
+                <a href="/admin/deletemedicine/<%= users[i].ID %>">Delete</a> |	
+                <a href="/admin/updatemedicine/<%= users[i].ID %>">Update</a> |			
+				
+			</td>
+		</tr>
+	<% } %>
+
+	</table>
+
+
+</body>
+</html>
